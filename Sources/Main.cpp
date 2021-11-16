@@ -5,19 +5,19 @@
 #include <vector>
 #include <stdexcept>
 
-Options processCommandLineArguments(std::vector<std::string> arguments);
-
-enum Mode
-{
-    NENGISH_TO_TEXT, TEXT_TO_NENGISH
-};
-
 struct Options
 {
     Mode mode;
 
     std::string inputFileName;
     std::string outputFileName;
+};
+
+Options processCommandLineArguments(std::vector<std::string> arguments);
+
+enum Mode
+{
+    NENGISH_TO_TEXT, TEXT_TO_NENGISH
 };
 
 struct InvalidUsageException
@@ -76,7 +76,9 @@ Options processCommandLineArguments(std::vector<std::string> arguments)
         result.inputFileName = arguments[2];
         result.outputFileName = arguments[3];
     } else {
-        
+        result.mode = Mode::TEXT_TO_NENGISH;
+        result.inputFileName = arguments[1];
+        result.outputFileName = arguments[2];
     }
     
     return result;
