@@ -1,0 +1,9 @@
+#ifndef E767A758_0E52_4EED_99CF_7C1748F513E6
+#define E767A758_0E52_4EED_99CF_7C1748F513E6
+
+struct InvalidUsageException
+{
+    
+};
+
+#endif /* E767A758_0E52_4EED_99CF_7C1748F513E6 */

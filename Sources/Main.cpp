@@ -5,25 +5,11 @@
 #include <vector>
 #include <stdexcept>
 
-enum class Mode
-{
-    NENGISH_TO_TEXT, TEXT_TO_NENGISH
-};
-
-struct Options
-{
-    Mode mode;
-
-    std::string inputFileName;
-    std::string outputFileName;
-};
+#include "Mode.hpp"
+#include "Options.hpp"
+#include "InvalidUsageException.hpp"
 
 Options processCommandLineArguments(std::vector<std::string> arguments);
-
-struct InvalidUsageException
-{
-    
-};
 
 int myMain(int argc, char** argv)
 {
