@@ -13,4 +13,4 @@ endif()
 
 add_executable(nengish-translator)
 
-add_subdirectory(src)
+add_subdirectory(Sources)
