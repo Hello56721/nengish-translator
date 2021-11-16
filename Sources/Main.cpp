@@ -5,6 +5,11 @@
 #include <vector>
 #include <stdexcept>
 
+enum class Mode
+{
+    NENGISH_TO_TEXT, TEXT_TO_NENGISH
+};
+
 struct Options
 {
     Mode mode;
@@ -14,11 +19,6 @@ struct Options
 };
 
 Options processCommandLineArguments(std::vector<std::string> arguments);
-
-enum class Mode
-{
-    NENGISH_TO_TEXT, TEXT_TO_NENGISH
-};
 
 struct InvalidUsageException
 {
