@@ -33,3 +33,14 @@
 
 # Visual Studio User specific configuration files
 .vscode/c_cpp_properties.json
+
+# CMake clutters
+CMakeCache.txt
+cmake_install.cmake
+CMakeFiles/
+
+# Ninja clutters
+build.ninja
+rules.ninja
+.ninja_deps
+.ninja_log
