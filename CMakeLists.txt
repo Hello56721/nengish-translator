@@ -5,6 +5,10 @@ project(NengishTranslator)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 
+if (UNIX AND NOT APPLE)
+    set(CMAKE_EXECUTABLE_SUFFIX ".out")
+endif()
+
 if (MSVC)
     add_compile_options(/Wall)
 else()
