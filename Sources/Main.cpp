@@ -15,7 +15,7 @@ struct Options
 
 Options processCommandLineArguments(std::vector<std::string> arguments);
 
-enum Mode
+enum class Mode
 {
     NENGISH_TO_TEXT, TEXT_TO_NENGISH
 };
