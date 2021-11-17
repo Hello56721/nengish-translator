@@ -11,7 +11,7 @@
 #include "CommandLine.hpp"
 
 // Uncomment to use another main function instead for testing purposes
-#define OVERRIDE_PRIMARY_MAIN_FUNCTION
+//#define OVERRIDE_PRIMARY_MAIN_FUNCTION
 
 int myMain(int argc, char** argv)
 {
