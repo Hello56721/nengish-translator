@@ -10,6 +10,9 @@
 #include "InvalidUsageException.hpp"
 #include "CommandLine.hpp"
 
+// Uncomment to use another main function instead for testing purposes
+#define OVERRIDE_PRIMARY_MAIN_FUNCTION
+
 int myMain(int argc, char** argv)
 {
     std::vector<std::string> commandLineArguments;
@@ -23,6 +26,7 @@ int myMain(int argc, char** argv)
     return 0;
 }
 
+#ifndef OVERRIDE_PRIMARY_MAIN_FUNCTION
 int main(int argc, char** argv)
 {
     try
@@ -40,3 +44,4 @@ int main(int argc, char** argv)
         return 0;
     }
 }
+#endif
